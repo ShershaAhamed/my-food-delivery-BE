@@ -32,7 +32,7 @@ const connectToDatabase = async () => {
 
 connectToDatabase();
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 
 
 // Routes
