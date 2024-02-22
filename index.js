@@ -8,23 +8,23 @@
 // server.js
 
 import express from 'express';
-import mongoose from 'mongoose';
 import DeliveryAgent from './models.js';
 import cors from 'cors'
+import {connectToDatabase} from './connection.js'
 
 
 const app = express();
 const port = 4000;
 
 // Connect to MongoDB
-const connectToDatabase = async () => {
-    try {
-        await mongoose.connect('mongodb+srv://ukkasnaina99:50Y4XrsXMhHqge5d@projectk.yqods5s.mongodb.net/ProjectK?retryWrites=true&w=majority');
-        console.log('Connected to MongoDB');
-    } catch (err) {
-        console.error('Error connecting to MongoDB:', err);
-    }
-};
+// const connectToDatabase = async () => {
+//     try {
+//         await mongoose.connect('mongodb+srv://ukkasnaina99:50Y4XrsXMhHqge5d@projectk.yqods5s.mongodb.net/ProjectK?retryWrites=true&w=majority');
+//         console.log('Connected to MongoDB');
+//     } catch (err) {
+//         console.error('Error connecting to MongoDB:', err);
+//     }
+// };
 
 connectToDatabase();
 app.use(express.json());
