@@ -32,10 +32,7 @@ const connectToDatabase = async () => {
 
 connectToDatabase();
 app.use(
-    cors({
-        origin: "https://sunny-cactus-73850f.netlify.app"
-   
-    })
+    cors()
 );
 
 // Middleware
