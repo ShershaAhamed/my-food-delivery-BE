@@ -31,15 +31,10 @@ const connectToDatabase = async () => {
 };
 
 connectToDatabase();
-app.use(
-    cors({
-        origin: "*"
-
-    })
-);
-
-// Middleware
 app.use(bodyParser.json());
+app.use(cors());
+
+
 
 // Routes
 app.post('/signup', async (req, res) => {
