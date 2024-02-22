@@ -3,11 +3,11 @@ import mongoose from 'mongoose';
 
 const deliveryAgentSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    mobileNumber: { type: String, required: true },
+    mobileNumber: { type: Number, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
     address: { type: String, required: true },
-    pincode: { type: String, required: true },
+    pincode: { type: Number, required: true },
     city: { type: String, required: true }
 });
 
